@@ -5,8 +5,11 @@ package main
 import "fmt"
 
 func main() {
-	var n,sum int;
-    fmt.Print("Enter a positive integer : ");
-	fmt.Scan(&n);
-	fmt.Print("n : ", n);
+	var a, b = 5, 5
+	sumInt(a, b)
+}
+
+func sumInt(a int, b int){
+	var result = a+b
+	fmt.Println(result)
 }
