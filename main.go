@@ -5,7 +5,7 @@ package main
 import "fmt"
 
 func main() {
-	var a, b = 5, 5
+	var a, b = 10, 5
 	sumInt(a, b)
 }
 
