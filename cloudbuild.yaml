@@ -1,5 +1,14 @@
 steps:
 
+- name: 'gcr.io/cloud-builders/go'
+  args: ['install', '.']
+  env: ['PROJECT_ROOT=app']
+
+- id: "Unit Test"
+  name: "gcr.io/cloud-builders/go"
+  env: ["GOPATH=."]
+  args: ["test","app"]
+
 - id: "Rodando docker-compose"
   name: "docker/compose"
   args: ["-f", "docker-compose.yml","up"]
@@ -8,8 +17,3 @@ steps:
   name: "gcr.io/cloud-builders/go"
   args: ["version"]
   env: ["GOPATH=."]
-
-- id: "Unit Test"
-  name: "gcr.io/cloud-builders/go"
-  env: ["GOPATH=."]
-  args: ["test","go_sum"]
