@@ -2,11 +2,11 @@ steps:
 
 - name: 'gcr.io/cloud-builders/go'
   args: ['install', '.']
-  env: ['PROJECT_ROOT=.']
+  env: ['PROJECT_ROOT=go-sum']
 
 - id: "Unit Test"
   name: "gcr.io/cloud-builders/go"
-  env: ["GOPATH=."]
+  env: ["GOPATH=./go-sum"]
   args: ["test","app"]
 
 - id: "Rodando docker-compose"
