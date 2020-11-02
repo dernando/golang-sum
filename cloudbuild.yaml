@@ -11,5 +11,5 @@ steps:
 
 - id: "Unit Test"
   name: "gcr.io/cloud-builders/go"
-  env: ["GOPATH=go-sum"]
-  args: ["test","sum_test"]
+  env: ["GOPATH=."]
+  args: ["test","go_sum"]
