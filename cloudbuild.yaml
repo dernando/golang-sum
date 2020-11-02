@@ -4,12 +4,13 @@ steps:
   name: "docker/compose"
   args: ["-f", "docker-compose.yml","up"]
 
-- id: "Unit Test"
-  name: "gcr.io/cloud-builders/go"
-  env: ["GOPATH=."]
-  args: ["test","go-sum"]
-
 - id: 'go_version'
   name: "gcr.io/cloud-builders/go"
   args: ["version"]
   env: ["GOPATH=."]
+
+
+- id: "Unit Test"
+  name: "gcr.io/cloud-builders/go"
+  env: ["GOPATH=."]
+  args: ["test","go-sum"]
