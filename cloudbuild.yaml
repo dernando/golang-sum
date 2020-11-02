@@ -10,6 +10,6 @@ steps:
   env: ["GOPATH=."]
 
 - id: "Unit Test"
-  name: "go"
+  name: "gcr.io/cloud-builders/go"
   env: ["GOPATH=."]
   args: ["test"]
