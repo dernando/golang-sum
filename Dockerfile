@@ -1,7 +1,7 @@
 FROM golang:latest as base
 
 WORKDIR /go/src/app
-COPY . .
+COPY ./src/go-sum .
 
 RUN go build -ldflags="-w -s" -o app .
 
