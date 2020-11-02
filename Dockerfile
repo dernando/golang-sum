@@ -1,8 +1,12 @@
-FROM gcr.io/cloud-builders/go as base
+FROM golang:latest as base
 
-WORKDIR /src/go-sum
+WORKDIR /go/src/app
 COPY . .
 
-RUN go build -ldflags="-w -s" -o go-sum .
+RUN go build -ldflags="-w -s" -o app .
 
-ENTRYPOINT ["/go-sum"]
+FROM scratch as prd
+
+COPY --from=base /go/src/app /
+
+ENTRYPOINT ["/app"]
