@@ -2,7 +2,7 @@ steps:
 
 - name: 'gcr.io/cloud-builders/go'
   args: ['install', '.']
-  env: ['PROJECT_ROOT=app']
+  env: ['PROJECT_ROOT=.']
 
 - id: "Unit Test"
   name: "gcr.io/cloud-builders/go"
