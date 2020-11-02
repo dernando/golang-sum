@@ -2,4 +2,4 @@ steps:
 
 - id: "Rodando docker-compose"
   name: "docker/compose"
-  args: ["-f", "docker-compose.yml","up","-d"]
+  args: ["-f", "docker-compose.yml","up"]
