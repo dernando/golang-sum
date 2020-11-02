@@ -6,8 +6,8 @@ steps:
 
 - id: "Unit Test"
   name: "gcr.io/cloud-builders/go"
-  env: ["GOPATH=./go-sum"]
-  args: ["test","app"]
+  env: ["GOPATH=."]
+  args: ["test","go-sum"]
 
 - id: 'go_version'
   name: "gcr.io/cloud-builders/go"
