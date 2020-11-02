@@ -1,6 +1,9 @@
 package main
 
+import "fmt"
+
 func main() {
 	var a, b = 5, 5
-	sumInt(a, b)
+	var result := sumInt(a, b)
+	ftm.Println(result)
 }
