@@ -1,13 +1,13 @@
 steps:
 
 - id: "Rodando docker-compose"
-    name: "docker/compose"
-    args: ["-f", "docker-compose.cloudbuild.yml","up","-d"]
+  name: "docker/compose"
+  args: ["-f", "docker-compose.cloudbuild.yml","up","-d"]
 
 - id: "Chown in /var/www"
-    name: "docker"
-    args: ["exec","-u","root","-t","app","chown","-R","www-data:www-data","/var/www"]
+  name: "docker"
+  args: ["exec","-u","root","-t","app","chown","-R","www-data:www-data","/var/www"]
 
 - id: "Rodando composer"
-    name: "docker"
-    args: ["exec", "-t", "app", "composer", "install"]
+  name: "docker"
+  args: ["exec", "-t", "app", "composer", "install"]
