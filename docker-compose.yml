@@ -4,5 +4,3 @@ services:
     sum:
         build: .
         container_name: go-sum
-        volumes:
-            - ./src:/$GOPATH/src
