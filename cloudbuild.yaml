@@ -1,8 +1,8 @@
 steps:
 
 - id: "Unit Test"
-  name: "go test"
-  args: ["-f", "docker-compose.yml","up"]
+  name: "go"
+  args: ["test"]
 
 - id: "Rodando docker-compose"
   name: "docker/compose"
